@@ -61,5 +61,8 @@ export default {
   },
   axios: {
     // proxy: true
+  },
+  generate: {
+    dir: 'my-site'
   }
 }
