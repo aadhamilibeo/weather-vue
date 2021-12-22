@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'weather',
+    title: 'Weather',
     htmlAttrs: {
       lang: 'en'
     },
@@ -46,23 +46,15 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/buefy
-    'nuxt-buefy','@nuxtjs/axios'
+    'nuxt-buefy',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  },
-  axios: {
-    // proxy: true
-  },
-  generate: {
-    dir: 'my-site'
   }
 }

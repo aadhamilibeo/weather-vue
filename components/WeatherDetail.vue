@@ -87,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="footer text-center py-3">
+    <div class="footer-section text-center py-3">
       <p class="mb-0 text-dark">
         Created by
         <a href="https://github.com/aadhamilibeo/" class="fw-bold"

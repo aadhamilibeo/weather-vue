@@ -1,7 +1,8 @@
 <template>
   <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error">An error occurred :(</p>
+  <p v-else-if="$fetchState.error"><pre>Fetching Error...</pre></p>
   <section v-else class="main">
+ 
     <template v-if="$store.state.setSearch == false">
       <WeatherStatus :weatherData="{ values }" />
     </template>
@@ -27,11 +28,6 @@ export default {
     return {
       values: [],
     };
-  },
-  methods: {
-    refresh() {
-      this.$fetch();
-    },
   },
   async fetch() {
     this.values = await fetch(
