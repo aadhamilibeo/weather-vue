@@ -25,11 +25,13 @@
     },
     "types": [
       "@nuxt/types",
-      "@types/node"
+      "@types/node",
+      "@nuxtjs/axios",
     ]
   },
   "exclude": [
     "node_modules",
-    ".nuxt"
+    ".nuxt",
+    "dist"
   ]
 }
