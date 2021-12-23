@@ -87,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-section text-center py-3">
+    <div class="footer text-center py-3">
       <p class="mb-0 text-dark">
         Created by
         <a href="https://github.com/aadhamilibeo/" class="fw-bold"
@@ -110,8 +110,8 @@ export default {
   data() {
     return {
       weatherDay: [""],
-      items: this.weatherData.values.consolidated_weather,
-      today: this.weatherData.values.consolidated_weather[0],
+      items: this.$store.state.data.consolidated_weather,
+      today: this.$store.state.data.consolidated_weather[0],
     };
   },
 
@@ -119,11 +119,11 @@ export default {
     let dates = [];
     for (
       let i = 0;
-      i < this.weatherData.values.consolidated_weather.length;
+      i < this.$store.state.data.consolidated_weather.length;
       i++
     ) {
       let date = new Date(
-        this.weatherData.values.consolidated_weather[i].applicable_date
+        this.$store.state.data.consolidated_weather[i].applicable_date
       );
       dates.push(
         date.toLocaleString("en-US", {

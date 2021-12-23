@@ -1,0 +1,14 @@
+{
+  "SearchForm": {
+    "description": "Auto imported from components/SearchForm.vue"
+  },
+  "TempChnage": {
+    "description": "Auto imported from components/TempChnage.vue"
+  },
+  "WeatherDetail": {
+    "description": "Auto imported from components/WeatherDetail.vue"
+  },
+  "WeatherStatus": {
+    "description": "Auto imported from components/WeatherStatus.vue"
+  }
+}

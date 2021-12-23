@@ -1,15 +1,12 @@
 <template>
-  <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error"><pre>Fetching Error...</pre></p>
-  <section v-else class="main">
- 
+  <section class="main">
     <template v-if="$store.state.setSearch == false">
-      <WeatherStatus :weatherData="{ values }" />
+      <WeatherStatus />
     </template>
     <template v-else>
       <SearchForm />
     </template>
-    <WeatherDetail :weatherData="{ values }" />
+    <WeatherDetail />
   </section>
 </template>
 
@@ -23,16 +20,6 @@ export default {
     WeatherStatus,
     WeatherDetail,
     SearchForm,
-  },
-  data() {
-    return {
-      values: [],
-    };
-  },
-  async fetch() {
-    this.values = await fetch(
-      "https://www.metaweather.com/api/location/44418/"
-    ).then((res) => res.json());
   },
 };
 </script>

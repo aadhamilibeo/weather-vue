@@ -8,6 +8,7 @@
         <span class="material-icons material-icons-outlined"> gps_fixed </span>
       </span>
     </header>
+
     <div class="state-abbr">
       <div
         class="state-abbr-bg"
@@ -50,15 +51,19 @@ import bgImage from "assets/img/Cloud-background.png";
 
 export default {
   name: "WeatherStatus",
-  props: ["weatherData"],
   data() {
     return {
       image: bgImage,
-      today: this.weatherData.values.consolidated_weather[0],
-      title: this.weatherData.values.title,
+      today: this.$store.state.data.consolidated_weather[0],
+      title: this.$store.state.data.title,
       weatherDate:
-        this.weatherData.values.consolidated_weather[0].applicable_date,
+        this.$store.state.data.consolidated_weather[0].applicable_date,
     };
+  },
+  computed: {
+    weather() {
+      return this.$store.state.data;
+    },
   },
   methods: {
     openSearch: function (event) {
