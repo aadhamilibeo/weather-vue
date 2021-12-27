@@ -1,24 +1,28 @@
 <template>
-  <section class="main">
-    <template v-if="$store.state.setSearch == false">
-      <WeatherStatus />
-    </template>
-    <template v-else>
-      <SearchForm />
-    </template>
-    <WeatherDetail />
-  </section>
+  <div>
+    <p v-if="$fetchState.pending">Fetching mountains...</p>
+    <p v-else-if="$fetchState.error">An error occurred :(</p>
+    <div v-else>
+      <h1>Nuxt Mountains</h1>
+      <ul>
+        <li v-for="mountain of mountains">{{ mountain.title }}</li>
+      </ul>
+      <button @click="$fetch">Refresh</button>
+    </div>
+  </div>
 </template>
 
 <script>
-import WeatherStatus from "~/components/WeatherStatus.vue";
-import WeatherDetail from "~/components/WeatherDetail.vue";
-import SearchForm from "~/components/SearchForm.vue";
-export default {
-  components: {
-    WeatherStatus,
-    WeatherDetail,
-    SearchForm,
-  },
-};
+  export default {
+    data() {
+      return {
+        mountains: []
+      }
+    },
+    async fetch() {
+      this.mountains = await fetch(
+        'https://www.metaweather.com/api/location/search/?query=london'
+      ).then(res => res.json())
+    }
+  }
 </script>
