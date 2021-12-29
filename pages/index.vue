@@ -28,9 +28,9 @@ export default {
     weather() {
       return this.$store.state.data;
     },
-    mounted() {
-      this.$store.dispatch("setForecasts");
-    },
+  },
+  mounted: function () {
+    this.$store.dispatch("setForecasts");
   },
 };
 </script>

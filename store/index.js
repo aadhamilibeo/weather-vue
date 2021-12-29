@@ -62,8 +62,13 @@ export const mutations = {
 }
 export const actions = {
   async setForecasts({ commit }) {
-    const data = await this.$axios.get(`https://www.metaweather.com/api/location/44418/`)
-    commit('SET_DATA', data);
-  }
+    const value = await this.$axios.$get('https://www.metaweather.com/api/location/44418/')
+    console.log("Hello")
+    commit('SET_DATA', value)
+  },
+  // async setForecasts({ commit }) {
+  //   const data = await this.$axios.$get(`https://www.metaweather.com/api/location/44418/`)
+  //   commit('SET_DATA', data);
+  // }
 }
 
