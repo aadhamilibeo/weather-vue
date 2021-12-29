@@ -1,5 +1,5 @@
 <template>
-  <section class="main">
+  <!-- <section class="main">
     <template v-if="$store.state.setSearch == false">
       <WeatherStatus />
     </template>
@@ -7,7 +7,10 @@
       <SearchForm />
     </template>
     <WeatherDetail />
-  </section>
+  </section> -->
+  <div>
+    {{ weather }}
+  </div>
 </template>
 
 <script>
@@ -20,6 +23,14 @@ export default {
     WeatherStatus,
     WeatherDetail,
     SearchForm,
+  },
+  computed: {
+    weather() {
+      return this.$store.state.data;
+    },
+    mounted() {
+      this.$store.dispatch("setForecasts");
+    },
   },
 };
 </script>

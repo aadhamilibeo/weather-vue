@@ -3,12 +3,14 @@
     "name": "index",
     "path": "/",
     "component": "C:\\\\xampp\\\\htdocs\\\\Project\\\\Vue\\\\weather-vue\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_e4a74bb0"
   },
   {
     "name": "slug",
     "path": "/:slug",
     "component": "C:\\\\xampp\\\\htdocs\\\\Project\\\\Vue\\\\weather-vue\\\\pages\\\\_slug.vue",
-    "chunkName": "pages/_slug"
+    "chunkName": "pages/_slug",
+    "_name": "_e8148e40"
   }
 ]
