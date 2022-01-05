@@ -1,4 +1,4 @@
-$primary:#3c47e9;
+$primary: #3c47e9;
 $body-color: #100e1d;
 $bg-color: #1e213a;
 $text-color: #e7e7eb;
@@ -6,7 +6,7 @@ $text-color2: #a09fb1;
 $gray: #88869d;
 $gray2: #6e707a;
 $white: #fff;
-$dark:rgb(136, 134, 157);
+$dark: rgb(136, 134, 157);
 *,
 ::after,
 ::before {
@@ -132,7 +132,7 @@ a {
             .weather-inner:first-child {
                 display: none;
             }
-            .boxs{
+            .boxs {
                 background-color: $bg-color;
                 padding: 15px 15px;
                 display: grid;
@@ -189,7 +189,7 @@ a {
         }
     }
 }
-.footer-section {
+.footer {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -327,15 +327,17 @@ ul.form-value {
         }
     }
 }
-.loader {
+.loaders {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    .material-icons {
-        font-size: 100px;
-        animation: rota 3s infinite;
-    }
+    width: 100%;
+    border: 0;
+}
+.loaders .material-icons {
+    font-size: 100px;
+    animation: rota 3s infinite;
 }
 @keyframes rota {
     from {
@@ -404,15 +406,15 @@ ul.form-value {
 .text-dark {
     color: $dark;
 }
-.footer-section {
+.footer {
     background-color: $body-color;
 }
-.button{
+.button {
     border-radius: 0;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-    &.is-gray{
-        background-color:$gray2;
+    &.is-gray {
+        background-color: $gray2;
         border-color: $gray2;
         color: $white;
     }
@@ -420,12 +422,12 @@ ul.form-value {
 input.input {
     border-radius: 0;
     background-color: transparent;
-    &::placeholder{
+    &::placeholder {
         color: $gray2;
         font-family: "Raleway", sans-serif;
     }
 }
-.is-primary{
+.is-primary {
     background-color: $primary !important;
     border-color: $primary !important;
     font-family: "Raleway", sans-serif;
@@ -433,8 +435,8 @@ input.input {
 .search-form .field.has-addons {
     gap: 10px;
 }
-.control.has-icons-left .icon{
-    color: $gray2
+.control.has-icons-left .icon {
+    color: $gray2;
 }
 span.material-icons.close-icon {
     display: flex;
@@ -444,6 +446,31 @@ span.material-icons.close-icon {
     color: $gray2;
     cursor: pointer;
 }
-.progress{
+.progress {
     height: 0.5rem;
+}
+.select select,
+.textarea,
+.input {
+    color: $white;
+}
+.search-box {
+    position: relative;
+    .search-value {
+        background-color: $body-color;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        top: 100%;
+        max-height: 400px;
+        overflow: auto;
+        li {
+            a {
+                color: $white;
+                padding: 15px;
+                display: block;
+                border: 1px solid $bg-color;
+            }
+        }
+    }
 }
