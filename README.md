@@ -42,11 +42,15 @@
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
 - Where can I see your demo?
-
+    Demo URL :https://weather-vue-eight.vercel.app/
+    Git URL: https://github.com/aadhamilibeo/weather-vue
 - What was your experience?
+    I feel very proud of libeo and myself for exploring the new development skills in me and doing a lot of research work day in and day out to commence the work allotted to me. I was very naive with Vue but have learned a lot in my journey of working on this app. 
 - What have you learned/improved?
+    Watched a lot of learning tutorials. Learned the basic concepts of vue including the component life cycle of vue. Leaned the data structure and flow of data in vue. 
+    When the basic got cleared then I moved on to nuxt.js and learned how to create dynamic pages and global storage and how to handle fetch and axios APIs in nuxt.js
 - Your wisdom? :)
-
+    I really enjoyed working on the weather app. Looking forward to the next tasks :)  
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
