@@ -1,3 +1,4 @@
+export { default as Loader } from '../..\\components\\Loader.vue'
 export { default as SearchForm } from '../..\\components\\SearchForm.vue'
 export { default as TempChnage } from '../..\\components\\TempChnage.vue'
 export { default as WeatherDetail } from '../..\\components\\WeatherDetail.vue'

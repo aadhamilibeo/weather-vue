@@ -3,14 +3,19 @@
     <span class="material-icons close-icon" v-on:click="openSearch">
       close
     </span>
-    <div class="pt-3">
+
+    <div class="pt-3 search-box">
       <b-field>
-        <b-input placeholder="Search Location" type="search" icon="magnify" expanded>
-        </b-input>
+        <b-input v-model="selected" expanded></b-input>
         <p class="control">
-          <b-button label="Search" type="is-primary" />
+          <NuxtLink :to="selected" class="button is-primary"> Search </NuxtLink>
         </p>
       </b-field>
+      <ul class="search-value" v-if="lists != ''">
+        <li v-for="(list, index) in lists" :key="index">
+          <NuxtLink :to="list.title"> {{ list.title }} </NuxtLink>
+        </li>
+      </ul>
     </div>
     <ul class="form-value pt-5 mb-0 ps-0">
       <li>
@@ -29,10 +34,29 @@
 <script>
 export default {
   name: "SearchForm",
+  data() {
+    return {
+      data: [
+        { title: "name", dic: "value" },
+        { title: "namdasde", dic: "dsadsad asd" },
+      ],
+      name: "",
+      selected: "",
+      lists: [],
+    };
+  },
   methods: {
     openSearch: function (event) {
       this.$store.commit("SET_SEARCH", false);
     },
+  },
+  updated: async function () {
+    if (this.selected) {
+      const value = await this.$axios.get(
+        `api/location/search/?query=${this.selected}`
+      );
+      this.lists = value.data;
+    }
   },
 };
 </script>

@@ -103,27 +103,23 @@
 import TempChnage from "./TempChnage";
 export default {
   name: "WeatherDetail",
-  props: ["weatherData"],
+  props: ["forecast"],
   components: {
     TempChnage,
   },
   data() {
     return {
       weatherDay: [""],
-      items: this.$store.state.data.consolidated_weather,
-      today: this.$store.state.data.consolidated_weather[0],
+      items: this.forecast.consolidated_weather,
+      today: this.forecast.consolidated_weather[0],
     };
   },
 
   mounted: function () {
     let dates = [];
-    for (
-      let i = 0;
-      i < this.$store.state.data.consolidated_weather.length;
-      i++
-    ) {
+    for (let i = 0; i < this.forecast.consolidated_weather.length; i++) {
       let date = new Date(
-        this.$store.state.data.consolidated_weather[i].applicable_date
+        this.forecast.consolidated_weather[i].applicable_date
       );
       dates.push(
         date.toLocaleString("en-US", {

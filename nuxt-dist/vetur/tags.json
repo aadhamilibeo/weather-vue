@@ -1,4 +1,7 @@
 {
+  "Loader": {
+    "description": "Auto imported from components/Loader.vue"
+  },
   "SearchForm": {
     "description": "Auto imported from components/SearchForm.vue"
   },

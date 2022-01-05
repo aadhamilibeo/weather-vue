@@ -54,10 +54,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/buefy
-    'nuxt-buefy','@nuxtjs/axios'
+    'nuxt-buefy', '@nuxtjs/axios', '@nuxtjs/proxy'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': { target: 'https://www.metaweather.com/', changeOrigin: true }
   }
 }

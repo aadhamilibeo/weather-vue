@@ -51,19 +51,15 @@ import bgImage from "assets/img/Cloud-background.png";
 
 export default {
   name: "WeatherStatus",
+  props: ["forecast"],
   data() {
     return {
       image: bgImage,
-      today: this.$store.state.data.consolidated_weather[0],
-      title: this.$store.state.data.title,
+      today: this.forecast.consolidated_weather[0],
+      title: this.forecast.title,
       weatherDate:
-        this.$store.state.data.consolidated_weather[0].applicable_date,
+        this.forecast.consolidated_weather[0].applicable_date,
     };
-  },
-  computed: {
-    weather() {
-      return this.$store.state.data;
-    },
   },
   methods: {
     openSearch: function (event) {
