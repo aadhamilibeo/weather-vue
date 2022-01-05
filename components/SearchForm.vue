@@ -6,18 +6,23 @@
 
     <div class="pt-3 search-box">
       <b-field>
-        <b-input v-model="selected" expanded></b-input>
+        <b-input
+          class="input-group"
+          placeholder="Search Location"
+          v-model="selected"
+          expanded
+        ></b-input>
         <p class="control">
           <NuxtLink :to="selected" class="button is-primary"> Search </NuxtLink>
         </p>
       </b-field>
-      <ul class="search-value" v-if="lists != ''">
-        <li v-for="(list, index) in lists" :key="index">
-          <NuxtLink :to="list.title"> {{ list.title }} </NuxtLink>
-        </li>
-      </ul>
     </div>
-    <ul class="form-value pt-5 mb-0 ps-0">
+    <ul class="form-value pt-5 mb-0 ps-0" v-if="lists != ''">
+      <li v-for="(list, index) in lists" :key="index">
+        <NuxtLink :to="list.title"> {{ list.title }} </NuxtLink>
+      </li>
+    </ul>
+    <ul class="form-value pt-5 mb-0 ps-0" v-else>
       <li>
         <NuxtLink to="/London"> London </NuxtLink>
       </li>
@@ -42,7 +47,7 @@ export default {
       ],
       name: "",
       selected: "",
-      lists: [],
+      lists: '',
     };
   },
   methods: {

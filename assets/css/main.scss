@@ -280,7 +280,7 @@ a {
 }
 .input-group {
     position: relative;
-    input.form-control {
+    .input {
         border-radius: 0;
         background-color: transparent;
         padding-left: 40px;
@@ -349,6 +349,11 @@ ul.form-value {
         opacity: 1;
     }
 }
+@media (max-width: 1399.98px) { 
+    .main .weather-detail .weather-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media (max-width: 1199px) {
     .main .weather-detail .weather-box {
         grid-template-columns: repeat(3, 1fr);
@@ -377,6 +382,10 @@ ul.form-value {
     .search-form {
         background-color: #1e213a;
         padding: 30px 20px;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .main .weather-status {
         height: 100vh;
     }
 }
