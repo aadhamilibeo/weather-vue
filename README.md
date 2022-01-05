@@ -51,7 +51,7 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
     When the basic got cleared then I moved on to nuxt.js and learned how to create dynamic pages and global storage and how to handle fetch and axios APIs in nuxt.js
 - **Your wisdom? :)** \
     I really enjoyed working on the weather app. Looking forward to the next tasks :)
-    
+
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
@@ -101,5 +101,5 @@ $ npm run generate
 ## Contact
 
 - Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://github.com/aadhamilibeo)
+- GitHub [@aadhamilibeo](https://github.com/aadhamilibeo)
 - Twitter [@your-twitter](https://{twitter.com/your-username})
